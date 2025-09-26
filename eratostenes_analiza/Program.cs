@@ -5,6 +5,12 @@ namespace SitoEratostenesaApp
 {
     class Program
     {
+        /**********************************************
+        nazwa funkcji: main
+        opis funkcji: pobiera od uzytkownika liczbe calkowita n, wywoluje funkcje SitoEratostenesa i wyswietla liczby pierwsze.
+        parametry: string[] args
+        zwracany typ i opis: void - funkcja nie zwraca wartosci
+        ***********************************************/
         static void Main(string[] args)
         {
             Console.WriteLine("Podaj liczbę n:");
@@ -20,6 +26,12 @@ namespace SitoEratostenesaApp
             }
         }
 
+        /**********************************************
+        nazwa funkcji: SitoEratostenesa
+        opis funkcji: znajdywanie wszystkich liczb pierwszych
+        parametry: int n - to granica zakresu, w ktorej szukamy liczb pierwszych
+        zwracany typ i opis: List<int> - lista liczb calkowitych zawierajaca wszystkie liczby pierwsze z danego zakresu
+        ***********************************************/
         static List<int> SitoEratostenesa(int n)
         {
             bool[] liczby = new bool[n + 1];
@@ -46,3 +58,9 @@ namespace SitoEratostenesaApp
         }
     }
 }
+
+//nie bylo sprawdzenia przy n<2
+//true tylko od i=2
+//j = i*2 zamiast i*i
+//petla z n zamiast z pierwiastkiem
+//0 i 1 nie sa liczbami pierwszymi wiec false dla liczby[1]
